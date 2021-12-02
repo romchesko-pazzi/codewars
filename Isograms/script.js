@@ -1,11 +1,15 @@
 function isIsogram(str) {
-    let x = str.toLowerCase();
-    for (let i = 0; i < x.length; i++) {
-        for (let k = i + 1; k < x.length; k++) {
-            if (x[i] == x[k]) {
+    let str = str.toLowerCase();
+    for (let i = 0; i < str.length; i++) {
+        for (let k = i + 1; k < str.length; k++) {
+            if (str[i] == str[k]) {
                 return false
             }
         }
     }
     return true
 }
+
+// function isIsogram(str){
+//   return new Set(str.toUpperCase()).size == str.length;
+// }
